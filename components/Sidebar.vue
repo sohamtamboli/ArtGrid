@@ -107,7 +107,7 @@
             <template #badge> 28 </template>
           </vs-avatar>
           <vs-avatar history history-gradient circle>
-            <img src="~/assets/kaneki.jpg" alt="" />
+            <img src="/kaneki.jpg" alt="" />
           </vs-avatar>
         </vs-row>
       </template>

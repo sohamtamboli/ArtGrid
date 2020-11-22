@@ -14,7 +14,7 @@ export default {
   },
 
   // Global CSS (https://go.nuxtjs.dev/config-css)
-  css: ['vuesax/dist/vuesax.css'],
+  css: ['vuesax/dist/vuesax.css', '~/assets/styles/main.scss'],
 
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
   plugins: ['@/plugins/vuesax'],
