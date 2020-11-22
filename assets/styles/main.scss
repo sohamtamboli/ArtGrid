@@ -1,3 +1,7 @@
+$bgcolor: red;
+$textprimary: #fff;
+$accentcolor: #ff6600;
+
 *,
 *::before,
 *::after {
@@ -9,6 +13,24 @@ html {
 }
 body {
   box-sizing: border-box;
-  background: red;
-  color: #fff;
+  background: $bgcolor;
+  color: $textprimary;
+}
+.icon {
+  width: 22px;
+  line-height: 1.5;
+  margin: 2px;
+}
+.list-item {
+  display: flex;
+  gap: 10px;
+  line-height: 1.8;
+  text-decoration: none;
+  color: inherit;
+}
+.menu {
+  color: $accentcolor;
+  width: 24px;
+  background: inherit;
+  margin: 2px;
 }
