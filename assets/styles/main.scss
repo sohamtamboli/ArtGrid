@@ -1,4 +1,4 @@
-$bgcolor: red;
+$bgcolor: #161616;
 $textprimary: #fff;
 $accentcolor: #ff6600;
 
@@ -33,4 +33,11 @@ body {
   width: 24px;
   background: inherit;
   margin: 2px;
+}
+.subtext {
+  color: rgb(220, 220, 220);
+  opacity: 0.65;
+}
+.name-title {
+  letter-spacing: 1px;
 }

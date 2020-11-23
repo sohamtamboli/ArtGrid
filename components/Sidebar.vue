@@ -2,6 +2,7 @@
   <div class="hidden">
     <vs-navbar
       shadow
+      fixed
       color="#212121"
       text-white
       center-collapsed
@@ -55,59 +56,59 @@
       <template #logo>
         <!-- ...img logo -->
       </template>
+      <div>
+        <vs-sidebar-item id="home" :active="active == 'home'"
+          ><nuxt-link to="/" class="list-item">
+            <i class="icon">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+                class="icon"
+              >
+                <path
+                  d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"
+                /></svg
+            ></i>
+            <h3>Home</h3>
+          </nuxt-link>
+        </vs-sidebar-item>
 
-      <vs-sidebar-item id="home"
-        ><nuxt-link to="/" class="list-item">
-          <i class="icon">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 20 20"
-              fill="currentColor"
-              class="icon"
-            >
-              <path
-                d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"
-              /></svg
-          ></i>
-          <h3>Home</h3>
-        </nuxt-link>
-      </vs-sidebar-item>
-
-      <vs-sidebar-item id="Profile">
-        <nuxt-link to="/" class="list-item">
-          <i class="icon">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 20 20"
-              fill="currentColor"
-            >
-              <path
-                fill-rule="evenodd"
-                d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"
-                clip-rule="evenodd"
-              /></svg
-          ></i>
-          <h3>Profle</h3>
-        </nuxt-link>
-      </vs-sidebar-item>
-      <vs-sidebar-item id="About">
-        <nuxt-link to="/" class="list-item">
-          <i class="icon">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 20 20"
-              fill="currentColor"
-            >
-              <path
-                fill-rule="evenodd"
-                d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                clip-rule="evenodd"
-              /></svg
-          ></i>
-          <h3>About the Creator</h3>
-        </nuxt-link>
-      </vs-sidebar-item>
-
+        <vs-sidebar-item id="profile" :active="active == 'profile'">
+          <nuxt-link to="/" class="list-item">
+            <i class="icon">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"
+                  clip-rule="evenodd"
+                /></svg
+            ></i>
+            <h3>Profle</h3>
+          </nuxt-link>
+        </vs-sidebar-item>
+        <vs-sidebar-item id="about" :active="active == 'about'">
+          <nuxt-link to="/about" class="list-item">
+            <i class="icon">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                  clip-rule="evenodd"
+                /></svg
+            ></i>
+            <h3>About the Creator</h3>
+          </nuxt-link>
+        </vs-sidebar-item>
+      </div>
       <template #footer>
         <vs-row justify="space-between">
           <vs-avatar badge-color="danger" badge-position="top-right" circle>
@@ -127,7 +128,7 @@
 export default {
   name: 'Sidebar',
   data: () => ({
-    active: 'home',
+    active: '',
     activeSidebar: false,
     isMobile: false,
     openSidebar: true,
