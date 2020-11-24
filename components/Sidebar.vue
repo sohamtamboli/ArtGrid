@@ -5,11 +5,13 @@
       fixed
       color="#212121"
       text-white
+      padding-scroll
       center-collapsed
       v-model="active"
+      class="rel"
     >
       <template #left>
-        <vs-button v-show="isMobile" @click="openMenu" flat dark>
+        <vs-button @click="openMenu" flat dark>
           <div class="menu">
             <i class="icon">
               <svg
@@ -25,6 +27,7 @@
             ></i>
           </div>
         </vs-button>
+        <h2>ArtGrid</h2>
       </template>
       <template #right>
         <vs-button flat circle color="#ff6600" size="large">Login</vs-button>
@@ -36,8 +39,9 @@
       :open="openSidebar"
       background="#212121"
       textWhite
+      class="abs"
     >
-      <vs-button v-show="isMobile" @click="closeMenu" flat dark>
+      <vs-button @click="closeMenu" flat dark>
         <div class="menu">
           <i class="icon">
             <svg
@@ -131,15 +135,10 @@ export default {
     active: '',
     activeSidebar: false,
     isMobile: false,
-    openSidebar: true,
+    openSidebar: false,
   }),
   mounted() {
     this.isMobile = screen.width > 760 ? false : true
-    if (!this.isMobile) {
-      this.openSidebar = true
-    } else {
-      this.openSidebar = false
-    }
   },
   methods: {
     openMenu() {
@@ -164,5 +163,14 @@ $accentcolor: #ff6600;
 }
 .vs-sidebar-content.textWhite .vs-sidebar__item.active {
   color: #ff6600 !important;
+}
+
+.rel {
+  position: relative;
+}
+.abs {
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 </style>

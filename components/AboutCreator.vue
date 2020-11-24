@@ -71,4 +71,32 @@ export default {
     #c471ed 99%
   ) !important;
 }
+
+@media only screen and (min-width: 600px) {
+  .grid-container {
+    display: grid;
+    height: 100vh;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 0.8fr 1fr 2fr 0.5fr;
+    grid-template-areas:
+      '. avatar nametag .'
+      '. info info .';
+  }
+  .pfp {
+    grid-area: avatar;
+    align-self: center;
+    justify-self: start;
+  }
+  .name-tag {
+    grid-area: nametag;
+    align-self: center;
+    justify-self: start;
+    text-align: left;
+  }
+  .bio {
+    grid-area: info;
+    align-self: start;
+    padding: 16px 32px;
+  }
+}
 </style>
