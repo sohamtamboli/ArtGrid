@@ -1,9 +1,16 @@
 <template>
-  <div>hello</div>
+  <div>
+    <ProfileTest />
+  </div>
 </template>
 
 <script>
-export default {}
+import ProfileTest from '@/components/ProfileTest'
+export default {
+  components: {
+    ProfileTest,
+  },
+}
 </script>
 
 <style lang="scss" scoped></style>

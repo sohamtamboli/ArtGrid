@@ -78,7 +78,7 @@ export default {
     display: grid;
     height: 100vh;
     grid-template-rows: 0.8fr 1fr;
-    grid-template-columns: 0.8fr 1fr 2fr 0.5fr;
+    grid-template-columns: 0.8fr 2fr 2fr 0.8fr;
     grid-template-areas:
       '. avatar nametag .'
       '. info info .';
@@ -86,7 +86,7 @@ export default {
   .pfp {
     grid-area: avatar;
     align-self: center;
-    justify-self: start;
+    justify-self: center;
   }
   .name-tag {
     grid-area: nametag;

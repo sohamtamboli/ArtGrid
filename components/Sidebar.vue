@@ -36,7 +36,7 @@
         </vs-navbar-item>
         <vs-navbar-item id="profile" :active="active == 'profile'">
           <nuxt-link to="/profile" class="list-item">
-            <h3>Profle</h3>
+            <h3>Profile</h3>
           </nuxt-link>
         </vs-navbar-item>
         <vs-navbar-item id="about" :active="active == 'about'">
@@ -106,7 +106,7 @@
                   clip-rule="evenodd"
                 /></svg
             ></i>
-            <h3>Profle</h3>
+            <h3>Profile</h3>
           </nuxt-link>
         </vs-sidebar-item>
         <vs-sidebar-item id="about" :active="active == 'about'">

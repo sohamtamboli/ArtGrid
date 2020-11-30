@@ -25,7 +25,7 @@ export default {
 <style lang="scss">
 .transparent {
   background: transparent;
-  height: 88.4px;
+  height: 100px;
 }
 .transparent-side {
   background: #fff;
