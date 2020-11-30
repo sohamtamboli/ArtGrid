@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;600&display=swap');
+
 $bgcolor: #161616;
 $textprimary: #fff;
 $accentcolor: #ff6600;
@@ -9,7 +11,7 @@ $accentcolor: #ff6600;
   margin: 0;
 }
 html {
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: Nunito !important;
 }
 body {
   box-sizing: border-box;
@@ -37,7 +39,7 @@ body {
 .subtext {
   color: rgb(220, 220, 220);
   opacity: 0.65;
-  font-weight: 300;
+  font-weight: 200;
 }
 .name-title {
   letter-spacing: 1px;
