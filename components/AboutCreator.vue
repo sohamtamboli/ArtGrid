@@ -2,7 +2,7 @@
   <div>
     <div class="grid-container">
       <vs-avatar class="pfp" history history-gradient circle size="220">
-        <img src="/kaneki.jpg" alt="" />
+        <img src="kaneki.jpg" alt="" />
       </vs-avatar>
       <div class="name-tag">
         <h1 class="name-title">Soham Tamboli</h1>
@@ -38,6 +38,7 @@ export default {
     'nametag'
     'info';
 }
+
 .pfp {
   grid-area: avatar;
   place-self: center;
