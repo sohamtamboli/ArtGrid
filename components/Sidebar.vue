@@ -8,10 +8,9 @@
       padding-scroll
       center-collapsed
       v-model="active"
-      class="rel"
     >
       <template #left>
-        <vs-button @click="openMenu" flat dark>
+        <vs-button @click="openMenu" flat dark v-show="isMobile">
           <div class="menu">
             <i class="icon">
               <svg
@@ -29,17 +28,32 @@
         </vs-button>
         <h2>ArtGrid</h2>
       </template>
+      <template v-show="!isMobile">
+        <vs-navbar-item id="home" :active="active == 'home'">
+          <nuxt-link to="/" class="list-item">
+            <h3>Home</h3>
+          </nuxt-link>
+        </vs-navbar-item>
+        <vs-navbar-item id="profile" :active="active == 'profile'">
+          <nuxt-link to="/profile" class="list-item">
+            <h3>Profle</h3>
+          </nuxt-link>
+        </vs-navbar-item>
+        <vs-navbar-item id="about" :active="active == 'about'">
+          <nuxt-link to="/about" class="list-item">
+            <h3>About the Creator</h3>
+          </nuxt-link>
+        </vs-navbar-item>
+      </template>
       <template #right>
         <vs-button flat circle color="#ff6600" size="large">Login</vs-button>
       </template>
     </vs-navbar>
     <vs-sidebar
-      absolute
       v-model="active"
       :open="openSidebar"
       background="#212121"
       textWhite
-      class="abs"
     >
       <vs-button @click="closeMenu" flat dark>
         <div class="menu">
@@ -61,7 +75,7 @@
         <!-- ...img logo -->
       </template>
       <div>
-        <vs-sidebar-item id="home" :active="active == 'home'"
+        <vs-sidebar-item id="home" :active="active == 'index'"
           ><nuxt-link to="/" class="list-item">
             <i class="icon">
               <svg
@@ -79,7 +93,7 @@
         </vs-sidebar-item>
 
         <vs-sidebar-item id="profile" :active="active == 'profile'">
-          <nuxt-link to="/" class="list-item">
+          <nuxt-link to="/profile" class="list-item">
             <i class="icon">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -139,6 +153,8 @@ export default {
   }),
   mounted() {
     this.isMobile = screen.width > 760 ? false : true
+    this.active = this.$route.name
+    console.log(this.active)
   },
   methods: {
     openMenu() {
@@ -165,12 +181,10 @@ $accentcolor: #ff6600;
   color: #ff6600 !important;
 }
 
-.rel {
-  position: relative;
+.vs-navbar__item {
+  color: inherit;
 }
-.abs {
-  position: absolute;
-  top: 0;
-  left: 0;
+.vs-navbar__item.active {
+  color: $accentcolor;
 }
 </style>

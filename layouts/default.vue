@@ -2,7 +2,7 @@
   <div>
     <Sidebar />
     <div class="transparent"></div>
-
+    <!-- <div class="transparent-side"></div> -->
     <Nuxt />
   </div>
 </template>
@@ -25,14 +25,14 @@ export default {
 <style lang="scss">
 .transparent {
   background: transparent;
-  height: 59.6px;
+  height: 88.4px;
 }
 .transparent-side {
-  background: transparent;
-  width: 260px;
-  height: 100%;
-  position: absolute;
-  left: 0;
-  top: 0;
+  background: #fff;
+
+  height: 200vh;
+  // position: absolute;
+  // left: 0;
+  // top: 0;
 }
 </style>

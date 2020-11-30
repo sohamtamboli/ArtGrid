@@ -76,7 +76,7 @@ export default {
   .grid-container {
     display: grid;
     height: 100vh;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 0.8fr 1fr;
     grid-template-columns: 0.8fr 1fr 2fr 0.5fr;
     grid-template-areas:
       '. avatar nametag .'
